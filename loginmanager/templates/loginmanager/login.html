@@ -1,7 +1,7 @@
 {% extends 'loginmanager/main.html' %}
 {% block content %}
 <main>
-    {% for message in messages %}
+{% for message in messages %}
 <div class="alert alert-info" role="alert">
   {{message}}
 </div>
@@ -39,7 +39,7 @@
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
+                        <div class="small"><a href="{% url 'loginmanager-register' %}">Need an account? Sign up!</a></div>
                     </div>
                 </div>
             </div>
