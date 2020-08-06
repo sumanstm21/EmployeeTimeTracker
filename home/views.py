@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .decorators import allowed_users, admin_only
+from loginmanager.models import *
 # Create your views here.
 
 @login_required(login_url='loginmanager-login')
@@ -9,7 +10,9 @@ from .decorators import allowed_users, admin_only
 @admin_only
 def home(request):
     # return HttpResponse('This is home page')
-    return render(request, 'home/index.html')
+    userinfo = Profile.objects.filter(user_id=request.user.id)
+    context = {'userinfo': userinfo}
+    return render(request, 'home/index.html', context)
 
 def userPage(request):
     # return HttpResponse('This is home page')

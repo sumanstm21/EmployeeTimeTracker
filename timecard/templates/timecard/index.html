@@ -4,11 +4,11 @@
     <div class="container-fluid">
         <h1 class="mt-4">Time Register</h1>
         It is {% now "jS F Y H:i" %}
-        {{ name }} {{ now }} {{ current }} {{ checkin_status }}
+<!--        {{ name }} {{ now }} {{ current }} {{ checkin_status }}-->
         <form method="post" action="">
             {% csrf_token %}
             {% if checkin_status == 0 %}
-            <p>{{ checkin_time }}</p> 
+<!--            <p>{{ checkin_time }}</p>-->
             <button type="submit" class="btn btn-primary btn-lg" name="checkin">Check In</button>
 
             <div class="form-group">

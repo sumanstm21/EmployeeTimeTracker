@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'timecard',
     'message',
     'test',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

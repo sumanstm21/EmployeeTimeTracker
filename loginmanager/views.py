@@ -96,6 +96,7 @@ def profile(request):
                 # form.save()
                 messages.success(request, 'Profile Created Successfully ')
         else:
+            form = ProfileForm(request.POST, instance=profile)
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Profile Updated Successfully ')

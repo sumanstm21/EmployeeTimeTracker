@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
+import csv
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from datetime import datetime
 from .forms import DailyLogForm
 from .models import DailyLog
+from loginmanager.models import *
+from .filters import ReportFilter
 # Create your views here.
 
 def timecard(request):
@@ -50,3 +53,42 @@ def record(request):
     records = DailyLog.objects.all().filter(user_id=pk_id)
     context = {'records': records}
     return render(request, 'timecard/record.html', context)
+
+def allrecord(request):
+    pk_id = request.user.id
+    records = DailyLog.objects.all()
+    context = {'records': records}
+    return render(request, 'timecard/allrecord.html', context)
+
+def report(request):
+    records = DailyLog.objects.all()
+    myFilter = ReportFilter(request.GET, queryset=records)
+    records = myFilter.qs
+    context = {'records': records, 'myFilter': myFilter}
+    return render(request, 'timecard/report.html', context)
+
+def getreport(request):
+    records = DailyLog.objects.all()
+    myFilter = ReportFilter(request.GET, queryset=records)
+    records = myFilter.qs
+    context = {'records': records, 'myFilter': myFilter}
+    if request.method == 'GET':
+        if 'download' in request.GET:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="file.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['Username', 'CheckIn Time', 'CheckIN Message', 'CheckOut Time', 'CheckOut Message','Duration', 'Payment'])
+            writer.writerow([''])
+            for r in records:
+                duration = r.checkout_time - r.checkin_time
+                # payment = duration
+                days, seconds = duration.days, duration.seconds
+                hours = days * 24 + seconds // 3600
+                minutes = (seconds % 3600) // 60
+                seconds = seconds % 60
+                payment = (minutes * 100) + (seconds * 100/60)
+                # payment = 'minute multiply by rate/60'
+                writer.writerow([r.user.username, r.checkin_time, r.checkin_message, r.checkout_time, r.checkout_message, (r.checkout_time - r.checkin_time), payment])
+            # writer.writerow([days, hours, minutes])
+            return response
+    return render(request, 'timecard/getreport.html', context)
