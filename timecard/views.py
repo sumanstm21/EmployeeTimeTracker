@@ -79,16 +79,26 @@ def getreport(request):
             writer = csv.writer(response)
             writer.writerow(['Username', 'CheckIn Time', 'CheckIN Message', 'CheckOut Time', 'CheckOut Message','Duration', 'Payment'])
             writer.writerow([''])
+            total = 0
+            rate = 0
             for r in records:
+                try:
+                    rates = Profile.objects.get(user_id=r.user_id)
+                    rate = rates.rate_per_hour
+                except:
+                    pass
+
                 duration = r.checkout_time - r.checkin_time
                 # payment = duration
                 days, seconds = duration.days, duration.seconds
                 hours = days * 24 + seconds // 3600
                 minutes = (seconds % 3600) // 60
                 seconds = seconds % 60
-                payment = (minutes * 100) + (seconds * 100/60)
-                # payment = 'minute multiply by rate/60'
-                writer.writerow([r.user.username, r.checkin_time, r.checkin_message, r.checkout_time, r.checkout_message, (r.checkout_time - r.checkin_time), payment])
-            # writer.writerow([days, hours, minutes])
+                payment = (hours * rate) + (minutes * rate/60) + (seconds * rate/3600)
+                total = total + payment
+                writer.writerow([r.user.username, r.checkin_time, r.checkin_message, r.checkout_time, r.checkout_message, duration, payment])
+                # writer.writerow([days, hours, minutes, seconds])
+            writer.writerow([''])
+            writer.writerow(['Total', '', '', '', '', '', total])
             return response
     return render(request, 'timecard/getreport.html', context)

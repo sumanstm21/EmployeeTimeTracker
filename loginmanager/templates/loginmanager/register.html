@@ -10,37 +10,40 @@
                         <form method="post" action="">
                             {% csrf_token %}
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">{{ form.username.label }}</label>
+                                        <label class="small mb-1">Username : </label>
                                         {{ form.username }}
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="small mb-1">{{ form.email.label }}</label>
+                                <label class="small mb-1">Your Email :</label>
                                 {{ form.email }}
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="small mb-1">{{ form.password1.label }}</label>
+                                        <label class="small mb-1">Password :    </label>
                                         {{ form.password1 }}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="small mb-1">{{ form.password2.label }}</label>
+                                        <label class="small mb-1">Password Again: </label>
                                         {{ form.password2 }}
                                     </div>
                                 </div>
                             </div>
                             <p>{{ form.errors }}</p>
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Create Account</button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Create
+                                Account
+                            </button>
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                        <div class="small"><a href="{% url 'loginmanager-login' %}">Have an account? Go to login</a>
+                        </div>
                     </div>
                 </div>
             </div>

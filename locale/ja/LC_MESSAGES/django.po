@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-10 18:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\EmployeeTimeTracker\urls.py:10
+msgid "admin/"
+msgstr "jap/"
+
+#: .\home\templates\home\main.html:48
+msgid "Settings"
+msgstr "設定"
+
+#: .\home\templates\home\main.html:51
+msgid "Logout"
+msgstr ""
+
+#: .\home\templates\home\main.html:61
+msgid "Menu"
+msgstr ""
+
+#: .\home\templates\home\main.html:64
+msgid "Dashboard"
+msgstr "トップ画面"
+
+#: .\home\templates\home\main.html:68
+msgid "Check IN/OUT"
+msgstr "入場 / 退場"
+
+#: .\home\templates\home\main.html:72
+msgid "Message"
+msgstr "メッセージ"
+
+#: .\home\templates\home\main.html:76
+msgid "Record"
+msgstr "記録"
+
+#: .\home\templates\home\main.html:79
+msgid "Interface"
+msgstr ""
+
+#: .\home\templates\home\main.html:82
+msgid "All Staff Records"
+msgstr "全社員記録"
+
+#: .\home\templates\home\main.html:90
+msgid "GetReport"
+msgstr "レポート"
+
+#: .\home\templates\home\main.html:153
+msgid "Logged in as:"
+msgstr "ログイン中"
+
+#: .\home\templates\home\user.html:3
+msgid "Welcome to User page."
+msgstr "Japanese"
+
+#: .\home\views.py:21
+msgid "Hello"
+msgstr "Konichiwa"
+
+#: .\test\templates\test\index.html:3
+msgid "This is Test File"
+msgstr "arigato kas dkasdjkj adlak j"
+
+#: .\test\views.py:8
+msgid "first name"
+msgstr "Hai Genuki Desi"

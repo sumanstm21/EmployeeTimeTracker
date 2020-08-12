@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .decorators import allowed_users, admin_only
 from loginmanager.models import *
+from django.utils.translation import gettext as _
 # Create your views here.
 
 @login_required(login_url='loginmanager-login')
@@ -16,4 +17,7 @@ def home(request):
 
 def userPage(request):
     # return HttpResponse('This is home page')
-    return render(request, 'home/user.html')
+    context = {
+        'hello': _('Hello')
+    }
+    return render(request, 'home/user.html', context)
