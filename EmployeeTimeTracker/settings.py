@@ -25,7 +25,7 @@ SECRET_KEY = 'abkh6jcq6lr_ra)123s1t(6idl@hs6!^x=t^b2&9)$v*qb!74)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'EmployeeTimeTracker.wsgi.application'
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EmployeeTimeTracker',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'NAME': 'timetracker-django',
+        'USER': 'suman@timetracker-django',
+        'PASSWORD': 'django1234',
         'HOST': 'localhost',
     }
     # 'default': {
