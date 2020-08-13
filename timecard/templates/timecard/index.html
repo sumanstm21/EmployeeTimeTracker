@@ -1,18 +1,18 @@
 {% extends 'home/main.html' %}
+{% load i18n %}
 {% block content %}
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Time Register</h1>
-        It is {% now "jS F Y H:i" %}
+        <h1 class="mt-4">{% trans "Time Register" %}</h1>
 <!--        {{ name }} {{ now }} {{ current }} {{ checkin_status }}-->
         <form method="post" action="">
             {% csrf_token %}
             {% if checkin_status == 0 %}
 <!--            <p>{{ checkin_time }}</p>-->
-            <button type="submit" class="btn btn-primary btn-lg" name="checkin">Check In</button>
+            <button type="submit" class="btn btn-primary btn-lg" name="checkin">{% trans "Check In" %}</button>
 
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Message :</label>
+                <label for="exampleFormControlTextarea1">{% trans "Message" %} :</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                           name="checkin_message"></textarea>
 <!--                <input type="hidden" name="checkin_time" value=""/>-->
@@ -20,10 +20,10 @@
                 <input type="hidden" name="status" value="1">
             </div>
             {% else %}
-            <p>You have checked In at {{ checkin_time }}</p>
-            <button type="submit" class="btn btn-primary btn-lg" name="checkout">Check Out</button>
+            <p>{% trans "You have checked In at" %} {{ checkin_time }}</p>
+            <button type="submit" class="btn btn-primary btn-lg" name="checkout">{% trans "Check Out" %}</button>
             <div class="form-group">
-                <label for="exampleFormControlTextarea2">Message :</label>
+                <label for="exampleFormControlTextarea2">{% trans "Message" %} :</label>
                 <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"
                           name="checkout_message"></textarea>
                 <input type="hidden" name="user" value="{{ user.id }}"/>

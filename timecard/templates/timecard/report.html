@@ -1,13 +1,14 @@
 {% extends 'home/main.html' %}
+{% load i18n %}
 {% block content %}
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Reports</h1>
+        <h1 class="mt-4">{% trans "Reports" %}</h1>
     </div>
     <div class="card mb-4">
         <form method="get">
             {{ myFilter.form.as_p }}
-            <button class="btn btn-primary" type="submit">Search</button>
+            <button class="btn btn-primary" type="submit">{% trans "Search" %}</button>
         </form>
         <div class="card-body">
             <div class="table-responsive">
@@ -15,23 +16,23 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Username</th>
-                        <th>CheckIn Time</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
                         <th>CheckIn Message</th>
-                        <th>CheckOut Time</th>
+                        <th>{% trans "CheckOut Time" %}</th>
                         <th>CheckOut Message</th>
-                        <th>Duration</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Username</th>
-                        <th>CheckIn Time</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
                         <th>CheckIn Message</th>
-                        <th>CheckOut Time</th>
+                        <th>{% trans "CheckOut Time" %}</th>
                         <th>CheckOut Message</th>
-                        <th>Duration</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </tfoot>
                     <tbody>

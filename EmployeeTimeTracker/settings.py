@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'EmployeeTimeTracker.wsgi.application'
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'timetracker-django',
-        'USER': 'suman@timetracker-django',
-        'PASSWORD': 'django1234',
+        'NAME': 'EmployeeTimeTracker',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
     }
     # 'default': {

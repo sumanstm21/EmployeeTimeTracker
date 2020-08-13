@@ -1,14 +1,15 @@
 {% extends 'home/main.html' %}
+{% load i18n %}
 {% block content %}
 <main>
     <div class="container-fluid">
-        <h1 class="mt-4">Records</h1>
+        <h1 class="mt-4">{% trans "Records" %}</h1>
 
     </div>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table mr-1"></i>
-            Your Daily Login Reports
+            {% trans "Your Daily Login Reports" %}
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -16,17 +17,17 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>CheckIn Time</th>
-                        <th>CheckOut Time</th>
-                        <th>Duration</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>CheckIn Time</th>
-                        <th>CheckOut Time</th>
-                        <th>Duration</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </tfoot>
                     <tbody>

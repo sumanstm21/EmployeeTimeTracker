@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 18:24+0200\n"
+"POT-Creation-Date: 2020-08-13 12:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,49 +20,87 @@ msgstr ""
 
 #: .\EmployeeTimeTracker\urls.py:10
 msgid "admin/"
-msgstr "jap/"
+msgstr "admin/"
 
-#: .\home\templates\home\main.html:48
-msgid "Settings"
-msgstr "設定"
-
-#: .\home\templates\home\main.html:51
-msgid "Logout"
-msgstr ""
-
-#: .\home\templates\home\main.html:61
-msgid "Menu"
-msgstr ""
-
-#: .\home\templates\home\main.html:64
+#: .\home\templates\home\index.html:6 .\home\templates\home\main.html:67
 msgid "Dashboard"
 msgstr "トップ画面"
 
-#: .\home\templates\home\main.html:68
+#: .\home\templates\home\index.html:15
+#: .\timecard\templates\timecard\allrecord.html:25
+#: .\timecard\templates\timecard\allrecord.html:36
+#: .\timecard\templates\timecard\getreport.html:25
+#: .\timecard\templates\timecard\getreport.html:36
+#: .\timecard\templates\timecard\record.html:22
+#: .\timecard\templates\timecard\record.html:30
+#: .\timecard\templates\timecard\report.html:24
+#: .\timecard\templates\timecard\report.html:35 .\timecard\views.py:82
+msgid "Duration"
+msgstr "期間"
+
+#: .\home\templates\home\index.html:24
+msgid "Role"
+msgstr "役割"
+
+#: .\home\templates\home\index.html:33
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: .\home\templates\home\index.html:42
+msgid "Rate Per Hour"
+msgstr "時給"
+
+#: .\home\templates\home\index.html:55
+msgid "Area Chart Example"
+msgstr "エリアチャート"
+
+#: .\home\templates\home\index.html:64
+msgid "Bar Chart Example"
+msgstr "バーチチャート"
+
+#: .\home\templates\home\index.html:72
+msgid "Please Create or Update profile from settings."
+msgstr ""
+
+#: .\home\templates\home\main.html:51
+msgid "Settings"
+msgstr "設定"
+
+#: .\home\templates\home\main.html:54
+msgid "Logout"
+msgstr ""
+
+#: .\home\templates\home\main.html:64
+msgid "Menu"
+msgstr ""
+
+#: .\home\templates\home\main.html:71
 msgid "Check IN/OUT"
 msgstr "入場 / 退場"
 
-#: .\home\templates\home\main.html:72
+#: .\home\templates\home\main.html:75
+#: .\timecard\templates\timecard\index.html:15
+#: .\timecard\templates\timecard\index.html:26
 msgid "Message"
 msgstr "メッセージ"
 
-#: .\home\templates\home\main.html:76
+#: .\home\templates\home\main.html:79
 msgid "Record"
 msgstr "記録"
 
-#: .\home\templates\home\main.html:79
-msgid "Interface"
-msgstr ""
-
 #: .\home\templates\home\main.html:82
+msgid "Interface"
+msgstr "インタフェス"
+
+#: .\home\templates\home\main.html:85
 msgid "All Staff Records"
 msgstr "全社員記録"
 
-#: .\home\templates\home\main.html:90
+#: .\home\templates\home\main.html:93
 msgid "GetReport"
 msgstr "レポート"
 
-#: .\home\templates\home\main.html:153
+#: .\home\templates\home\main.html:156
 msgid "Logged in as:"
 msgstr "ログイン中"
 
@@ -74,10 +112,190 @@ msgstr "Japanese"
 msgid "Hello"
 msgstr "Konichiwa"
 
+#: .\loginmanager\templates\loginmanager\profile.html:11
+msgid "Profile"
+msgstr "プロフィール"
+
+#: .\loginmanager\templates\loginmanager\profile.html:22 .\test\views.py:8
+msgid "first name"
+msgstr "名"
+
+#: .\loginmanager\templates\loginmanager\profile.html:26
+#, fuzzy
+#| msgid "first name"
+msgid "last name"
+msgstr "名"
+
+#: .\loginmanager\templates\loginmanager\profile.html:30
+msgid "Email"
+msgstr "メールアドレス"
+
+#: .\loginmanager\templates\loginmanager\profile.html:34
+msgid "Phone"
+msgstr "電話番号"
+
+#: .\loginmanager\templates\loginmanager\profile.html:38
+msgid "Gender"
+msgstr "性別"
+
+#: .\loginmanager\templates\loginmanager\profile.html:42
+msgid "Address"
+msgstr "住所"
+
+#: .\loginmanager\templates\loginmanager\profile.html:46
+msgid "Bank name"
+msgstr "銀行名"
+
+#: .\loginmanager\templates\loginmanager\profile.html:50
+msgid "Bank account"
+msgstr "銀行口座"
+
+#: .\loginmanager\templates\loginmanager\profile.html:64
+msgid "Update Information"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\register.html:34
+msgid "Your Username"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\register.html:40
+msgid "Your Email A/C"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\register.html:46
+msgid "Type Password"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\register.html:52
+msgid "Password again"
+msgstr ""
+
+#: .\loginmanager\templates\loginmanager\register.html:58
+#, fuzzy
+#| msgid "Bank account"
+msgid "Create Account"
+msgstr "銀行口座"
+
 #: .\test\templates\test\index.html:3
 msgid "This is Test File"
 msgstr "arigato kas dkasdjkj adlak j"
 
-#: .\test\views.py:8
-msgid "first name"
-msgstr "Hai Genuki Desi"
+#: .\timecard\templates\timecard\allrecord.html:12
+#, fuzzy
+#| msgid "All Staff Records"
+msgid "All Staffs Daily Login Reports"
+msgstr "全社員記録"
+
+#: .\timecard\templates\timecard\allrecord.html:20
+#: .\timecard\templates\timecard\allrecord.html:31
+#: .\timecard\templates\timecard\getreport.html:20
+#: .\timecard\templates\timecard\getreport.html:31
+#: .\timecard\templates\timecard\report.html:19
+#: .\timecard\templates\timecard\report.html:30 .\timecard\views.py:82
+msgid "Username"
+msgstr ""
+
+#: .\timecard\templates\timecard\allrecord.html:21
+#: .\timecard\templates\timecard\allrecord.html:32
+#: .\timecard\templates\timecard\getreport.html:21
+#: .\timecard\templates\timecard\getreport.html:32
+#: .\timecard\templates\timecard\record.html:20
+#: .\timecard\templates\timecard\record.html:28
+#: .\timecard\templates\timecard\report.html:20
+#: .\timecard\templates\timecard\report.html:31 .\timecard\views.py:82
+msgid "CheckIn Time"
+msgstr "入場 時間"
+
+#: .\timecard\templates\timecard\allrecord.html:22
+#: .\timecard\templates\timecard\allrecord.html:33
+#: .\timecard\templates\timecard\getreport.html:22
+#: .\timecard\templates\timecard\getreport.html:33
+#, fuzzy
+#| msgid "Message"
+msgid "CheckIn Message"
+msgstr "メッセージ"
+
+#: .\timecard\templates\timecard\allrecord.html:23
+#: .\timecard\templates\timecard\allrecord.html:34
+#: .\timecard\templates\timecard\getreport.html:23
+#: .\timecard\templates\timecard\getreport.html:34
+#: .\timecard\templates\timecard\record.html:21
+#: .\timecard\templates\timecard\record.html:29
+#: .\timecard\templates\timecard\report.html:22
+#: .\timecard\templates\timecard\report.html:33 .\timecard\views.py:82
+msgid "CheckOut Time"
+msgstr "退場 時間"
+
+#: .\timecard\templates\timecard\allrecord.html:24
+#: .\timecard\templates\timecard\allrecord.html:35
+#: .\timecard\templates\timecard\getreport.html:24
+#: .\timecard\templates\timecard\getreport.html:35 .\timecard\views.py:82
+#, fuzzy
+#| msgid "Message"
+msgid "CheckOut Message"
+msgstr "メッセージ"
+
+#: .\timecard\templates\timecard\getreport.html:6
+#: .\timecard\templates\timecard\report.html:6
+#, fuzzy
+#| msgid "GetReport"
+msgid "Reports"
+msgstr "レポート"
+
+#: .\timecard\templates\timecard\getreport.html:11
+#: .\timecard\templates\timecard\report.html:11
+msgid "Search"
+msgstr "検索"
+
+#: .\timecard\templates\timecard\getreport.html:12
+msgid "Download"
+msgstr "ダウンロード"
+
+#: .\timecard\templates\timecard\index.html:6
+msgid "Time Register"
+msgstr "時間登録"
+
+#: .\timecard\templates\timecard\index.html:12
+#, fuzzy
+#| msgid "Check IN/OUT"
+msgid "Check In"
+msgstr "入場 / 退場"
+
+#: .\timecard\templates\timecard\index.html:23
+msgid "You have checked In at"
+msgstr "＊＊時刻に入場しました。"
+
+#: .\timecard\templates\timecard\index.html:24
+#, fuzzy
+#| msgid "Check IN/OUT"
+msgid "Check Out"
+msgstr "入場 / 退場"
+
+#: .\timecard\templates\timecard\record.html:6
+#, fuzzy
+#| msgid "Record"
+msgid "Records"
+msgstr "記録"
+
+#: .\timecard\templates\timecard\record.html:12
+msgid "Your Daily Login Reports"
+msgstr "レポート表示"
+
+#: .\timecard\views.py:82
+#, fuzzy
+#| msgid "Message"
+msgid "CheckIN Message"
+msgstr "メッセージ"
+
+#: .\timecard\views.py:82
+msgid "Payment"
+msgstr "お支払い"
+
+#: .\timecard\views.py:104
+msgid "Total"
+msgstr "合計"
+
+#, fuzzy
+#~| msgid "first name"
+#~ msgid "First Name"
+#~ msgstr "名"

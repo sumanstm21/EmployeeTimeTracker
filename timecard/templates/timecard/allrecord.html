@@ -1,4 +1,5 @@
 {% extends 'home/main.html' %}
+{% load i18n %}
 {% block content %}
 <main>
     <div class="container-fluid">
@@ -8,7 +9,7 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table mr-1"></i>
-            All Staffs Daily Login Reports
+            {% trans "All Staffs Daily Login Reports" %}
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -16,23 +17,23 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Username</th>
-                        <th>CheckIn Time</th>
-                        <th>CheckIn Message</th>
-                        <th>CheckOut Time</th>
-                        <th>CheckOut Message</th>
-                        <th>Duration</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckIn Message" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "CheckOut Message" %}</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
                         <th>#</th>
-                        <th>Username</th>
-                        <th>CheckIn Time</th>
-                        <th>CheckIn Message</th>
-                        <th>CheckOut Time</th>
-                        <th>CheckOut Message</th>
-                        <th>Duration</th>
+                        <th>{% trans "Username" %}</th>
+                        <th>{% trans "CheckIn Time" %}</th>
+                        <th>{% trans "CheckIn Message" %}</th>
+                        <th>{% trans "CheckOut Time" %}</th>
+                        <th>{% trans "CheckOut Message" %}</th>
+                        <th>{% trans "Duration" %}</th>
                     </tr>
                     </tfoot>
                     <tbody>

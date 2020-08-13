@@ -7,6 +7,8 @@ from .forms import DailyLogForm
 from .models import DailyLog
 from loginmanager.models import *
 from .filters import ReportFilter
+from django.utils.translation import gettext as _
+
 # Create your views here.
 
 def timecard(request):
@@ -77,7 +79,7 @@ def getreport(request):
             response = HttpResponse(content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="file.csv"'
             writer = csv.writer(response)
-            writer.writerow(['Username', 'CheckIn Time', 'CheckIN Message', 'CheckOut Time', 'CheckOut Message','Duration', 'Payment'])
+            writer.writerow([_('Username'), _('CheckIn Time'), _('CheckIN Message'), _('CheckOut Time'), _('CheckOut Message'), _('Duration'), _('Payment')])
             writer.writerow([''])
             total = 0
             rate = 0
@@ -99,6 +101,6 @@ def getreport(request):
                 writer.writerow([r.user.username, r.checkin_time, r.checkin_message, r.checkout_time, r.checkout_message, duration, payment])
                 # writer.writerow([days, hours, minutes, seconds])
             writer.writerow([''])
-            writer.writerow(['Total', '', '', '', '', '', total])
+            writer.writerow([_('Total'), '', '', '', '', '', total])
             return response
     return render(request, 'timecard/getreport.html', context)
