@@ -60,7 +60,7 @@ msgstr "バーチチャート"
 
 #: .\home\templates\home\index.html:72
 msgid "Please Create or Update profile from settings."
-msgstr ""
+msgstr "設定からプロファイルを作成または更新してください"
 
 #: .\home\templates\home\main.html:51
 msgid "Settings"
@@ -68,11 +68,11 @@ msgstr "設定"
 
 #: .\home\templates\home\main.html:54
 msgid "Logout"
-msgstr ""
+msgstr "ログアウト"
 
 #: .\home\templates\home\main.html:64
 msgid "Menu"
-msgstr ""
+msgstr "メニュー"
 
 #: .\home\templates\home\main.html:71
 msgid "Check IN/OUT"
@@ -152,23 +152,23 @@ msgstr "銀行口座"
 
 #: .\loginmanager\templates\loginmanager\profile.html:64
 msgid "Update Information"
-msgstr ""
+msgstr "更新情報"
 
 #: .\loginmanager\templates\loginmanager\register.html:34
 msgid "Your Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #: .\loginmanager\templates\loginmanager\register.html:40
 msgid "Your Email A/C"
-msgstr ""
+msgstr "Eメール"
 
 #: .\loginmanager\templates\loginmanager\register.html:46
 msgid "Type Password"
-msgstr ""
+msgstr "パスワード入力"
 
 #: .\loginmanager\templates\loginmanager\register.html:52
 msgid "Password again"
-msgstr ""
+msgstr "パスワード再入力"
 
 #: .\loginmanager\templates\loginmanager\register.html:58
 #, fuzzy
@@ -193,7 +193,7 @@ msgstr "全社員記録"
 #: .\timecard\templates\timecard\report.html:19
 #: .\timecard\templates\timecard\report.html:30 .\timecard\views.py:82
 msgid "Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #: .\timecard\templates\timecard\allrecord.html:21
 #: .\timecard\templates\timecard\allrecord.html:32
