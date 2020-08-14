@@ -19,6 +19,7 @@
                 <h3>Time Khanri</h3>
 <!--                <img src="{% static 'home/images/time_en2.png' %}" class="img-rounded" style="float:right" alt="Time Khanri" width="304" height="236">-->
             </a>
+            {% get_current_language as LANGUAGE_CODE %}
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -32,16 +33,16 @@
             <form method="post" action="{% url 'set_language' %}">
                 {% csrf_token %}
                 <input type="hidden" name="text" value="{{ redirect_to }}">
-                <select name="language" id="">
+                <select name="language" id="" onchange="this.form.submit()">
                     {% get_available_languages as LANGUAGES %}
                     {% get_language_info_list for LANGUAGES as languages %}
                     {% for language in languages %}
-                    <option value="{{ language.code }}" {% if lanauage.code == LANGUAGE_CODE %} selected {% endif %}>
+                    <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
                         {{ language.name_local }} ({{ language.code }})
                     </option>
                     {% endfor %}
                 </select>
-                <input type="submit" value="Go">
+                <!--                            <input type="submit" value="Go">-->
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">

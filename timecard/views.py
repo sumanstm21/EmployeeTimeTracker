@@ -86,7 +86,10 @@ def getreport(request):
             for r in records:
                 try:
                     rates = Profile.objects.get(user_id=r.user_id)
-                    rate = rates.rate_per_hour
+                    if rates.rate_per_hour == None:
+                        rate = 0
+                    else:
+                        rate = rates.rate_per_hour
                 except:
                     pass
 
