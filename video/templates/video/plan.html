@@ -1,5 +1,9 @@
 {% extends 'home/main.html' %}
 {% load i18n %}
 {% block content %}
-Video Plan 1
+<div class="container">
+    <h1>{{ plan.title}}</h1>
+    <p>{{ plan.desctiption }}</p>
+    <iframe width="877" height="493" src="https://www.youtube.com/embed/g_cgWvS4aSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 {% endblock %}
