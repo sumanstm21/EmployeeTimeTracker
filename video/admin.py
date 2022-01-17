@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import VideoPlan, Customer
 
-# Register your models here.
+admin.site.register(VideoPlan)
+admin.site.register(Customer)

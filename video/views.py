@@ -1,7 +1,7 @@
 from gc import get_objects
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from video.models import VideoPlan
+from video.models import VideoPlan, Customer
 import stripe
 # from django.http import HttpResponse
 
@@ -9,12 +9,18 @@ stripe.api_key = "sk_test_51KIrEMFYZuypDLyMLWtRBqhgaHAySe1fY6R2evoKBjbe5QqtCqIc3
 
 # Create your views here.
 def home(request):
-    plans = VideoPlan.objects
-    return render(request, 'video/home.html', {'video':plans})
+    plans = VideoPlan.objects.all()
+    return render(request, 'video/home.html', {'plans':plans})
 
 def plan(request, pk):
     plan = get_object_or_404(VideoPlan, pk=pk)
     if plan.premium:
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'video/plan.html', {'plan':plan})
+            except Customer.DoesNotExist:
+                    return redirect('join')        
         return redirect('join')
     else:
         return render(request, 'video/plan.html', {'plan':plan})
@@ -44,6 +50,23 @@ def checkout(request):
         else:
             subscription = stripe.Subscription.create(customer=stripe_customer.id,
             items=[{'plan':plan}])
+
+        # customer = Customer()
+        # customer.user = request.user
+        # customer.stripeid = stripe_customer.id
+        # customer.membership = True
+        # customer.cancel_at_period_end = False
+        # customer.stripe_subscription_id = subscription.id
+        # customer.save()
+
+        customer = Customer()
+        customer.user = request.user
+        customer.stripeid = stripe_customer.id
+        customer.membership = True
+        customer.cancel_at_period_end = False
+        customer.stripe_subscription_id = subscription.id
+        customer.save()
+
         return redirect('video')
     else:
         coupon = 'none'
