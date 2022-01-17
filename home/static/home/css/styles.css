@@ -6164,7 +6164,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #0da141 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10152,9 +10152,10 @@ body {
 }
 .sb-topnav.navbar-dark #sidebarToggle {
   color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(93, 215, 29, 0.8); */
 }
 .sb-topnav.navbar-light #sidebarToggle {
-  color: #212529;
+  color: #212529; 
 }
 
 .sb-sidenav {
@@ -10204,7 +10205,7 @@ body {
 }
 
 .sb-sidenav-dark {
-  background-color: #212529;
+  background-color: #0da141;
   color: rgba(255, 255, 255, 0.5);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
