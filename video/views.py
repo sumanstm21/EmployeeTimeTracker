@@ -28,6 +28,22 @@ def checkout(request):
     coupons = {'christmas':31, 'newyear':50, 'welcome':10}
 
     if request.method == 'POST':
+        stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])
+        plan = 'price_1KIrNZFYZuypDLyMTJBV5Q25'
+        if request.POST['plan'] == 'yearly':
+            plan = 'price_1KIrNZFYZuypDLyMPEjkOAeC'
+        if request.POST['coupon'] in coupons:
+            percentage = coupons[request.POST['coupon'].lower()]
+            try:
+                coupon = stripe.Coupon.create(duration='once', id=request.POST['coupon'].lower(),
+                percent_off=percentage)
+            except:
+                pass
+            subscription = stripe.Subscription.create(customer=stripe_customer.id,
+            items=[{'plan':plan}], coupon=request.POST['coupon'].lower())
+        else:
+            subscription = stripe.Subscription.create(customer=stripe_customer.id,
+            items=[{'plan':plan}])
         return redirect('video')
     else:
         coupon = 'none'
