@@ -6,6 +6,7 @@ urlpatterns = [
     path('join/', views.join, name='join'),
     path('plan/<int:pk>', views.plan, name='plan'),
     path('checkout/', views.checkout, name='checkout'),
+    path('settings/', views.settings, name='settings'),
     # path('getreport/', views.getreport, name='getreport'),
     # path('api/', views.DailyLogs.as_view(), name='getreport'),
 ]
