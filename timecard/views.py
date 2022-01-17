@@ -3,13 +3,18 @@ import csv
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from datetime import datetime
+
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from .forms import DailyLogForm
 from .models import DailyLog
 from loginmanager.models import *
 from .filters import ReportFilter
 from django.utils.translation import gettext as _
-
 # Create your views here.
+from .serializers import dailylogSerializer
+
 
 def timecard(request):
     checkin_check = DailyLog.objects.filter(user_id=request.user.id).last()
@@ -107,3 +112,13 @@ def getreport(request):
             writer.writerow([_('Total'), '', '', '', '', '', total])
             return response
     return render(request, 'timecard/getreport.html', context)
+
+class DailyLogs(APIView):
+
+    def get(self, request):
+        dailylogs = DailyLog.objects.all()
+        serializer = dailylogSerializer(dailylogs, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass

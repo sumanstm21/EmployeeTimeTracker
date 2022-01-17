@@ -13,6 +13,7 @@ urlpatterns += i18n_patterns(
     path('message/', include('message.urls')),
     path('timecard/', include('timecard.urls')),
     path('test/', include('test.urls')),
+    path('chat/', include('chatapp.urls')),
 )
 # urlpatterns = [
 #     path('i18n/', include('django.conf.urls.i18n')),

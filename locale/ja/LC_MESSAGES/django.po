@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-13 12:30+0200\n"
+"POT-Creation-Date: 2020-08-27 21:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "admin/"
 msgstr "admin/"
 
-#: .\home\templates\home\index.html:6 .\home\templates\home\main.html:67
+#: .\home\templates\home\index.html:6 .\home\templates\home\main.html:68
 msgid "Dashboard"
 msgstr "トップ画面"
 
@@ -46,7 +46,7 @@ msgstr "役割"
 msgid "Phone Number"
 msgstr "電話番号"
 
-#: .\home\templates\home\index.html:42
+#: .\home\templates\home\index.html:42 .\loginmanager\models.py:23
 msgid "Rate Per Hour"
 msgstr "時給"
 
@@ -62,45 +62,45 @@ msgstr "バーチチャート"
 msgid "Please Create or Update profile from settings."
 msgstr "設定からプロファイルを作成または更新してください"
 
-#: .\home\templates\home\main.html:51
+#: .\home\templates\home\main.html:52
 msgid "Settings"
 msgstr "設定"
 
-#: .\home\templates\home\main.html:54
+#: .\home\templates\home\main.html:55
 msgid "Logout"
 msgstr "ログアウト"
 
-#: .\home\templates\home\main.html:64
+#: .\home\templates\home\main.html:65
 msgid "Menu"
 msgstr "メニュー"
 
-#: .\home\templates\home\main.html:71
+#: .\home\templates\home\main.html:72
 msgid "Check IN/OUT"
 msgstr "入場 / 退場"
 
-#: .\home\templates\home\main.html:75
+#: .\home\templates\home\main.html:76
 #: .\timecard\templates\timecard\index.html:15
 #: .\timecard\templates\timecard\index.html:26
 msgid "Message"
 msgstr "メッセージ"
 
-#: .\home\templates\home\main.html:79
+#: .\home\templates\home\main.html:80
 msgid "Record"
 msgstr "記録"
 
-#: .\home\templates\home\main.html:82
+#: .\home\templates\home\main.html:83
 msgid "Interface"
 msgstr "インタフェス"
 
-#: .\home\templates\home\main.html:85
+#: .\home\templates\home\main.html:86
 msgid "All Staff Records"
 msgstr "全社員記録"
 
-#: .\home\templates\home\main.html:93
+#: .\home\templates\home\main.html:94
 msgid "GetReport"
 msgstr "レポート"
 
-#: .\home\templates\home\main.html:156
+#: .\home\templates\home\main.html:157
 msgid "Logged in as:"
 msgstr "ログイン中"
 
@@ -112,42 +112,94 @@ msgstr "Japanese"
 msgid "Hello"
 msgstr "Konichiwa"
 
-#: .\loginmanager\templates\loginmanager\profile.html:11
-msgid "Profile"
-msgstr "プロフィール"
+#: .\loginmanager\models.py:14 .\message\models.py:10
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "ユーザー名"
 
+#: .\loginmanager\models.py:15
 #: .\loginmanager\templates\loginmanager\profile.html:22 .\test\views.py:8
 msgid "first name"
 msgstr "名"
 
+#: .\loginmanager\models.py:16
 #: .\loginmanager\templates\loginmanager\profile.html:26
 #, fuzzy
 #| msgid "first name"
 msgid "last name"
 msgstr "名"
 
+#: .\loginmanager\models.py:17
 #: .\loginmanager\templates\loginmanager\profile.html:30
 msgid "Email"
 msgstr "メールアドレス"
 
+#: .\loginmanager\models.py:18
 #: .\loginmanager\templates\loginmanager\profile.html:34
 msgid "Phone"
 msgstr "電話番号"
 
+#: .\loginmanager\models.py:19
 #: .\loginmanager\templates\loginmanager\profile.html:38
 msgid "Gender"
 msgstr "性別"
 
+#: .\loginmanager\models.py:20
 #: .\loginmanager\templates\loginmanager\profile.html:42
 msgid "Address"
 msgstr "住所"
 
+#: .\loginmanager\models.py:21
 #: .\loginmanager\templates\loginmanager\profile.html:46
 msgid "Bank name"
 msgstr "銀行名"
 
+#: .\loginmanager\models.py:22
 #: .\loginmanager\templates\loginmanager\profile.html:50
 msgid "Bank account"
+msgstr "銀行口座"
+
+#: .\loginmanager\models.py:24
+msgid "Monthly Salary"
+msgstr ""
+
+#: .\loginmanager\models.py:27 .\loginmanager\models.py:28
+#: .\loginmanager\templates\loginmanager\profile.html:11
+msgid "Profile"
+msgstr "プロフィール"
+
+#: .\loginmanager\templates\loginmanager\login.html:40
+#: .\loginmanager\templates\loginmanager\login.html:65
+msgid "Login"
+msgstr "ログイン"
+
+#: .\loginmanager\templates\loginmanager\login.html:46
+#: .\timecard\templates\timecard\allrecord.html:20
+#: .\timecard\templates\timecard\allrecord.html:31
+#: .\timecard\templates\timecard\getreport.html:20
+#: .\timecard\templates\timecard\getreport.html:31
+#: .\timecard\templates\timecard\report.html:19
+#: .\timecard\templates\timecard\report.html:30 .\timecard\views.py:82
+msgid "Username"
+msgstr "ユーザー名"
+
+#: .\loginmanager\templates\loginmanager\login.html:51
+#, fuzzy
+#| msgid "Type Password"
+msgid "Password"
+msgstr "パスワード入力"
+
+#: .\loginmanager\templates\loginmanager\login.html:58
+#, fuzzy
+#| msgid "Type Password"
+msgid "Remember Password"
+msgstr "パスワード入力"
+
+#: .\loginmanager\templates\loginmanager\login.html:70
+#, fuzzy
+#| msgid "Bank account"
+msgid "Need an account"
 msgstr "銀行口座"
 
 #: .\loginmanager\templates\loginmanager\profile.html:64
@@ -176,24 +228,37 @@ msgstr "パスワード再入力"
 msgid "Create Account"
 msgstr "銀行口座"
 
+#: .\message\models.py:8
+#, fuzzy
+#| msgid "Message"
+msgid "message"
+msgstr "メッセージ"
+
+#: .\message\models.py:9
+msgid "Date Created"
+msgstr "日付 作成した"
+
+#: .\message\models.py:11
+msgid "Acknowledge"
+msgstr "認める"
+
 #: .\test\templates\test\index.html:3
 msgid "This is Test File"
 msgstr "arigato kas dkasdjkj adlak j"
+
+#: .\timecard\models.py:17
+msgid "Daily Log"
+msgstr "毎日のログ"
+
+#: .\timecard\models.py:18
+msgid "Daily Logs"
+msgstr "毎日のログ"
 
 #: .\timecard\templates\timecard\allrecord.html:12
 #, fuzzy
 #| msgid "All Staff Records"
 msgid "All Staffs Daily Login Reports"
 msgstr "全社員記録"
-
-#: .\timecard\templates\timecard\allrecord.html:20
-#: .\timecard\templates\timecard\allrecord.html:31
-#: .\timecard\templates\timecard\getreport.html:20
-#: .\timecard\templates\timecard\getreport.html:31
-#: .\timecard\templates\timecard\report.html:19
-#: .\timecard\templates\timecard\report.html:30 .\timecard\views.py:82
-msgid "Username"
-msgstr "ユーザー名"
 
 #: .\timecard\templates\timecard\allrecord.html:21
 #: .\timecard\templates\timecard\allrecord.html:32
@@ -291,9 +356,14 @@ msgstr "メッセージ"
 msgid "Payment"
 msgstr "お支払い"
 
-#: .\timecard\views.py:104
+#: .\timecard\views.py:107
 msgid "Total"
 msgstr "合計"
+
+#, fuzzy
+#~| msgid "Profile"
+#~ msgid "Profiles"
+#~ msgstr "プロフィール"
 
 #, fuzzy
 #~| msgid "first name"

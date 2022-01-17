@@ -34,9 +34,6 @@ def logoutpage(request):
 
 @unauthenticated_user
 def registerpage(request):
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-
     form = CreateUserForm()
 
     if request.method == "POST":
@@ -76,7 +73,7 @@ def profile(request):
     except:
         pass
 
-    print(Profilefound)
+    # print(Profilefound)
     if Profilefound is None:
         # print('No profile found')
         form = ProfileForm(instance=user)
