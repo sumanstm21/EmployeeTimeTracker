@@ -15,6 +15,7 @@ urlpatterns += i18n_patterns(
     path('test/', include('test.urls')),
     path('chat/', include('chatapp.urls')),
     path('video/', include('video.urls')),
+    path('hashing/', include('hashing.urls')),
 )
 # urlpatterns = [
 #     path('i18n/', include('django.conf.urls.i18n')),
