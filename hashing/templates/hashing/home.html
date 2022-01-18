@@ -1,7 +1,7 @@
 {% extends 'home/main.html' %}
 {% load i18n %}
 {% block content %}
-<form action="{% url 'home' %}" method="post">
+<form action="{% url 'hashing' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input name="submit" type="submit" value="Hash">

@@ -1,0 +1,9 @@
+{% extends 'home/main.html' %}
+{% load i18n %}
+{% block content %}
+<h2>Hash:</h2>
+<h1>{{ hash.hash }}</h1>
+<h2>Text:</h2>
+{{ hash.text }}
+<h3><a href="{% url 'hashing' %}">Testing</a></h3>	
+{% endblock %}

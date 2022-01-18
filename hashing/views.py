@@ -18,7 +18,11 @@ def home(request):
                 hash.text = text
                 hash.hash = text_hash
                 hash.save()
-            return redirect('hashing', hash=text_hash)
+            return redirect('hash', hash=text_hash)
 
     form = HashForm()
     return render(request, 'hashing/home.html', {'form':form})
+
+def hash(request, hash):
+    hash = Hash.objects.get(hash=hash)
+    return render(request, 'hashing/hash.html', {'hash':hash})
