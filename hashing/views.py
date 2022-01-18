@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import HashForm
 
 # Create your views here.
 def home(request):
@@ -16,5 +17,5 @@ def home(request):
     #             hash.save()
     #         return redirect('hash', hash=text_hash)
 
-    # form = HashForm()
-    return render(request, 'hashing/home.html')
+    form = HashForm()
+    return render(request, 'hashing/home.html', {'form':form})
